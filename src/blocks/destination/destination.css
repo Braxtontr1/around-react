@@ -1,0 +1,7 @@
+.destination {
+    position: relative;
+    width: 282px;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 1;
+}

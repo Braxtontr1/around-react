@@ -1,0 +1,15 @@
+.header__image {
+    padding-bottom: 41px;
+}
+
+@media screen and (max-width: 880px) {
+    .header__image {
+        padding: 0 0 32px 27px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header__image {
+        max-width: 126px;
+    }
+}

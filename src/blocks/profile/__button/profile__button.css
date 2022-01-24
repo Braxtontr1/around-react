@@ -1,0 +1,16 @@
+.profile__button {
+    width: 24px;
+    height: 24px;
+    margin: auto auto auto 18px;
+    background-image: url(../../../images/edit-button.svg);
+    background-color: inherit;
+}
+
+@media screen and (max-width: 600px) {
+    .profile__button {
+        width: 16px;
+        height: 16px;
+        margin: auto auto auto 10px;
+        line-height: 29px;
+    }
+}

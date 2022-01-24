@@ -1,0 +1,6 @@
+.destination__like-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 18px auto 0;
+}

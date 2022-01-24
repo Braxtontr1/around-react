@@ -1,0 +1,8 @@
+.modal__box_type_image {
+    display: flex;
+    margin: auto;
+    width: 75%;
+    max-width: 75vw;
+    max-height: 75vh;
+    border-radius: 0;
+}

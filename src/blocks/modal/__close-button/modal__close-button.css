@@ -1,0 +1,23 @@
+.modal__close-button {
+    outline: none;
+    border: none;
+    background-image: url('../../../images/close-button.svg');
+    background-color: rgba(0, 0, 0, 0.0);
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+}
+
+@media screen and (max-width: 600px) {
+    .modal__close-button {
+        background-repeat: no-repeat;
+        background-image: url('../../../images/close-button_small.svg');
+        width: 30px;
+        height: 30px;
+        top: -30px;
+        right: -30px;
+    }
+}

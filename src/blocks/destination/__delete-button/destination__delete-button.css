@@ -1,0 +1,16 @@
+.destination__delete-button {
+    width: 18px;
+    height: 19px;
+    background-image: url('../../../images/delete-button.svg');
+    background-color: inherit;
+    margin: 0;
+    right: 15px;
+    top: 18px;
+    position: absolute;
+    z-index: 10;
+    /* visibility: hidden; */
+}
+
+.destination__delete-button:hover {
+    opacity: 0.6;
+}

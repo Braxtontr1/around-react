@@ -1,0 +1,10 @@
+.form__error {
+    max-width: 358px;
+    color: rgba(255, 0, 0, 1);
+    font-size: 12px;
+    padding:5px 0 13px;
+}
+
+.form__error:last-of-type {
+    padding: 5px 0 0 0;
+}

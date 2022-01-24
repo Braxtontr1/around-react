@@ -1,0 +1,23 @@
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 17px;
+    padding-top: 50px;
+    max-width: 880px;
+    margin: auto;
+}
+
+@media screen and (max-width: 880px) {
+    .destinations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .destinations {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 36px;
+    }
+}

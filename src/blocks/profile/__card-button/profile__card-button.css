@@ -1,0 +1,17 @@
+.profile__card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-image: url(../../../images/card-button.svg);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 880px) {
+    .profile__card-button {
+        background-image: url(../../../images/card__mobile-button.svg);
+        width: 282px;
+        margin-top: 36px;
+    }
+}

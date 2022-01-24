@@ -1,0 +1,11 @@
+.destination__like-button {
+    width: 21px;
+    height: 19px;
+    background-image: url('../../../images/like-button.svg');
+    background-color: inherit;
+    margin: 0;
+}
+
+.destination__like-button:hover {
+    opacity: 0.5;
+}
