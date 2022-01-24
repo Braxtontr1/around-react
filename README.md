@@ -1,4 +1,4 @@
-# [Project 4: Around The U.S.](https://braxtontr1.github.io/around-reaact/)
+# [Project 4: Around The U.S.](https://braxtontr1.github.io/around-react/)
 
 ## Overview
 
