@@ -9,7 +9,7 @@ function Main({
   onCardDeleteClick,
   onCardClick,
 }) {
-  const [user, setUser] = React.useState("");
+  const [user, setUser] = React.useState({});
   const [cards, setCards] = React.useState([]);
 
   React.useEffect(() => {
@@ -19,7 +19,7 @@ function Main({
         setUser(userInfo);
       })
       .catch((err) => console.log(`Error: ${err}`));
-  });
+  }, []);
 
   React.useEffect(() => {
     api
@@ -28,7 +28,7 @@ function Main({
         setCards(cardData);
       })
       .catch((err) => console.log(`Error: ${err}`));
-  });
+  }, []);
 
   return (
     <main>
