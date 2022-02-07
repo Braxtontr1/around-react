@@ -8,7 +8,7 @@
     top: 18px;
     position: absolute;
     z-index: 10;
-    /* visibility: hidden; */
+    border: none;
 }
 
 .destination__delete-button:hover {

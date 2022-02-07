@@ -1,34 +1,17 @@
 import React from "react";
-import { api } from "../utils/api";
 import Card from "./Card";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Main({
+  cards,
   addCardOpen,
   editProfileOpen,
   editAvatarOpen,
   onCardDeleteClick,
   onCardClick,
+  onCardLikeClick,
 }) {
-  const [user, setUser] = React.useState({});
-  const [cards, setCards] = React.useState([]);
-
-  React.useEffect(() => {
-    api
-      .getUserInfo()
-      .then((userInfo) => {
-        setUser(userInfo);
-      })
-      .catch((err) => console.log(`Error: ${err}`));
-  }, []);
-
-  React.useEffect(() => {
-    api
-      .getCards()
-      .then((cardData) => {
-        setCards(cardData);
-      })
-      .catch((err) => console.log(`Error: ${err}`));
-  }, []);
+  const user = React.useContext(CurrentUserContext);
 
   return (
     <main>
@@ -39,7 +22,7 @@ function Main({
               className="profile__image-button"
               onClick={editAvatarOpen}
             />
-            <img className="profile__image" src={user.avatar} alt=" " />
+            <img className="profile__image" src={user.avatar} alt={user.name} />
           </div>
           <div className="profile__info">
             <div className="profile__name-container">
@@ -68,6 +51,7 @@ function Main({
             card={card}
             onCardClick={onCardClick}
             onCardDeleteClick={onCardDeleteClick}
+            onCardLikeClick={onCardLikeClick}
           />
         ))}
       </section>

@@ -4,6 +4,7 @@
     background-image: url('../../../images/like-button.svg');
     background-color: inherit;
     margin: 0;
+    border: none;
 }
 
 .destination__like-button:hover {

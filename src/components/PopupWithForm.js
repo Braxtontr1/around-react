@@ -7,6 +7,7 @@ function PopupWithForm({
   children,
   formTitle,
   buttonText,
+  onSubmission,
 }) {
   return (
     <>
@@ -18,7 +19,7 @@ function PopupWithForm({
             name="close button"
             onClick={onClose}
           />
-          <form className="form" name={name}>
+          <form className="form" name={name} onSubmit={onSubmission}>
             <h2 className="form__heading">{formTitle}</h2>
             {children}
             <button
