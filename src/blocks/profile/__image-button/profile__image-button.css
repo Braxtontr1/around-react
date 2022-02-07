@@ -11,6 +11,7 @@
     cursor: pointer;
     opacity: 0;
     border: none;
+    transition: opacity ease-in-out 0.4s;
 }
 
 .profile__image-button:hover {

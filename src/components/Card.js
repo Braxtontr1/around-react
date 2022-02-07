@@ -22,12 +22,12 @@ export default function Card({
   const user = React.useContext(CurrentUserContext);
 
   const isLiked = card.likes.some((i) => i._id === user._id);
-  const cardLikeButtonClassName = `destination__like-button ${
+  const cardLikeButtonClassName = `button destination__like-button ${
     isLiked && "destination__like-button_active"
   }`;
 
   const isOwn = card.owner._id === user._id;
-  const cardDeleteButtonClassName = `destination__delete-button ${
+  const cardDeleteButtonClassName = `button destination__delete-button ${
     isOwn
       ? "destination__delete-button_visible"
       : "destination__delete-button_hidden"
