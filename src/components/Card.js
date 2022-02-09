@@ -1,12 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
-export default function Card({
-  card,
-  onCardClick,
-  onCardDeleteClick,
-  onCardLikeClick,
-}) {
+function Card({ card, onCardClick, onCardDeleteClick, onCardLikeClick }) {
   function handleClick() {
     onCardClick(card);
   }
@@ -19,9 +14,9 @@ export default function Card({
     onCardDeleteClick(card);
   }
 
-  const user = React.useContext(CurrentUserContext);
+  const user = useContext(CurrentUserContext);
 
-  const isLiked = card.likes.some((i) => i._id === user._id);
+  const isLiked = card.likes.some((item) => item._id === user._id);
   const cardLikeButtonClassName = `button destination__like-button ${
     isLiked && "destination__like-button_active"
   }`;
@@ -63,3 +58,5 @@ export default function Card({
     </article>
   );
 }
+
+export default Card;

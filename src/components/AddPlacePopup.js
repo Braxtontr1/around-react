@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useRef, useState, useContext } from "react";
 import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
-export default function AddPlacePopup({ isOpen, onAddNewCard, onClose }) {
-  const user = React.useContext(CurrentUserContext);
+function AddPlacePopup({ isOpen, onAddNewCard, onClose }) {
+  const user = useContext(CurrentUserContext);
 
-  const nameInputRef = React.useRef();
-  const linkInputRef = React.useRef();
+  const nameInputRef = useRef();
+  const linkInputRef = useRef();
 
-  const [name, setName] = React.useState("");
-  const [link, setLink] = React.useState("");
+  const [name, setName] = useState("");
+  const [link, setLink] = useState("");
 
   function handleTitleChange(e) {
     setName(e.target.value);
@@ -68,3 +68,5 @@ export default function AddPlacePopup({ isOpen, onAddNewCard, onClose }) {
     </PopupWithForm>
   );
 }
+
+export default AddPlacePopup;

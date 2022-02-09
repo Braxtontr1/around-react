@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import PopupWithForm from "./PopupWithForm";
 
-export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
-  const inputRef = React.useRef();
+function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
+  const inputRef = useRef();
 
-  React.useEffect(() => {
-    inputRef.current.value = " ";
+  useEffect(() => {
+    inputRef.current.value = "";
   }, [isOpen]);
 
   function handleSubmit(e) {
@@ -37,3 +37,4 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
     </PopupWithForm>
   );
 }
+export default EditAvatarPopup;

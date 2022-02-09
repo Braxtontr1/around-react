@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "./Card";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Main({
   cards,
-  addCardOpen,
-  editProfileOpen,
-  editAvatarOpen,
+  onAddCardOpen,
+  onEditProfileOpen,
+  onEditAvatarOpen,
   onCardDeleteClick,
   onCardClick,
   onCardLikeClick,
 }) {
-  const user = React.useContext(CurrentUserContext);
+  const user = useContext(CurrentUserContext);
 
   return (
     <main>
@@ -20,7 +20,7 @@ function Main({
           <div className="profile__image-container">
             <button
               className="profile__image-button"
-              onClick={editAvatarOpen}
+              onClick={onEditAvatarOpen}
             />
             <img className="profile__image" src={user.avatar} alt={user.name} />
           </div>
@@ -31,7 +31,7 @@ function Main({
                 className="profile__button button"
                 type="button"
                 name="edit profile button"
-                onClick={editProfileOpen}
+                onClick={onEditProfileOpen}
               />
             </div>
             <p className="profile__about-me">{user.about}</p>
@@ -41,7 +41,7 @@ function Main({
           type="button"
           name="card edit button"
           className="profile__card-button button"
-          onClick={addCardOpen}
+          onClick={onAddCardOpen}
         />
       </section>
       <section className="destinations">

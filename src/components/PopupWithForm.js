@@ -10,30 +10,28 @@ function PopupWithForm({
   onSubmission,
 }) {
   return (
-    <>
-      <div className={`modal modal_type_${name} ${isOpen && "modal_open"}`}>
-        <div className="modal__box">
+    <div className={`modal modal_type_${name} ${isOpen && "modal_open"}`}>
+      <div className="modal__box">
+        <button
+          className="modal__close-button button"
+          type="button"
+          name="close button"
+          onClick={onClose}
+        />
+        <form className="form" name={name} onSubmit={onSubmission}>
+          <h2 className="form__heading">{formTitle}</h2>
+          {children}
           <button
-            className="modal__close-button button"
-            type="button"
-            name="close button"
-            onClick={onClose}
-          />
-          <form className="form" name={name} onSubmit={onSubmission}>
-            <h2 className="form__heading">{formTitle}</h2>
-            {children}
-            <button
-              className="form__button button"
-              type="submit"
-              name="delete button"
-              value={buttonText}
-            >
-              {buttonText}
-            </button>
-          </form>
-        </div>
+            className="form__button button"
+            type="submit"
+            name="delete button"
+            value={buttonText}
+          >
+            {buttonText}
+          </button>
+        </form>
       </div>
-    </>
+    </div>
   );
 }
 
